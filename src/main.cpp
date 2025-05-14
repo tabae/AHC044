@@ -13,8 +13,8 @@ int main() {
     read();
 
     IterationControl<State> sera;
-    State stat = sera.climb(1.8, State::initState());
-
+    State stat = sera.anneal(1.8, 1e6, 0.1, State::initState());
+    stat.print();
     cerr << "my score = " << stat.score << endl;
     cerr << "elapsed time = " << toki.elapsed() << endl;
 }

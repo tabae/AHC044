@@ -12,7 +12,9 @@ g++ -std=c++20 -O2 -o a.out src/main.cpp
 
 # Run and Judge
 ./a.out < tools/in/${file}.txt > tools/out/${file}.txt
-cargo run -r --bin vis tools/in/${file}.txt > tools/out/${file}.txt
+cd tools
+cargo run -r --bin vis in/${file}.txt out/${file}.txt
 
 # If interactive problem, run the following command
-# cargo run -r --bin tester ./a.out < tools/in/${file}.txt > tools/out/${file}.txt
+# cd tools
+# cargo run -r --bin tester ./a.out < in/${file}.txt > out/${file}.txt

@@ -8,13 +8,17 @@ using namespace std;
 using ll = long long;
 
 namespace common {
-int n;
+int n, l;
+vector<int> t;
 void read();
 };  // namespace common
 
 void common::read() {
-    cin >> n;
-    // do something
+    cin >> n >> l;
+    t.resize(n);
+    for (int i = 0; i < n; ++i) {
+        cin >> t[i];
+    }
 }
 
 #endif

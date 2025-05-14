@@ -23,7 +23,7 @@ struct IterationControl {
           swap_counter(0),
           liner_cooling(false),
           save_best_answer(true),
-          use_rollback(true),
+          use_rollback(false),
           maximize(true),
           gettime_interval(1) {}
     STATE climb(double time_limit, STATE initial_state);
